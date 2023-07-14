@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+
+#game {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+#grama {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(35, 160, 35);
+}
+ 
+#play {
+    background: none;
+    border-radius: 100px;
+    border: none;
+    padding: 2rem 3rem 2rem 3rem;
+    font-size: 6rem;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+
+#game-over {
+    background: none;
+    border: none;
+    font-size: 8rem;
+    display: none;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+
+
+  
+
+
+#pontos {
+    bottom: 50%;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    background: #292626;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.parabens {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    padding: 2rem;
+    background-color: #68ff5b;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    display: none;
+}
+
+#game-over_pontos {
+    font-size: 2rem;
+    font-weight: bold; 
+    padding: 2rem;
+    position: absolute;
+}
+
+.parabens h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+#pipe {
+    position: absolute;
+    bottom: 0;
+    width: 8%;
+    right: -8%;
+}
+
+#recorde {
+    top: 0;
+    position: absolute;
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+#mario {
+    position: absolute;
+    bottom: 0;
+    width: 13%;
+    display: none;
+}
+
+#nuvens {
+    position: absolute;
+    width: 40%;
+    right: -40%;
+}
+
+.animar-nuven {
+    animation: nuvens 20s infinite linear;
+}
+
+.animar-mario {
+    animation: pular 500ms infinite ;
+}
+
+.animar-pipe {
+    animation: pipe 1.4s infinite linear;
+}
+
+.animar-pipe-respossivo {
+    animation: pipe 1.4s infinite linear;
+}
+
+
+@keyframes nuvens {
+    from {
+        right: -40%;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pipe {
+    from{
+        right: -8%;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pipe-responsive {
+    from{
+        right: -10%;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pular {
+    0%{bottom: 0;}
+    10%{bottom: 7rem;}
+    20%{bottom: 7.5rem;}
+    30%{bottom: 7.5rem;}
+    40%{bottom: 7.5rem;}
+    45%{bottom: 7.5rem;}
+    50%{bottom: 7.5rem;}
+    60%{bottom: 7.5rem;}
+    100%{bottom: 0;}
+}
+
+@media (max-width:1000px){
+    #mario {
+        width: 17%;
+    }
+
+    #nuvens {
+        width: 45%;
+    }
+
+    #pipe {
+        width: 10%;
+        right: -10%;
+    }
+
+    #game-over_pontos {
+        font-size: 1.5rem;
+    }
+}
+
